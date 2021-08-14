@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  margin: auto;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #d0d0d0;
+  transition: all 0.2s ease-in-out;
+}
+h1 {
+  margin: 50px 0 30px;
+}
+.container {
+  max-width: 600px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.faq {
+  background-color: transparent;
+  border: 1px solid rgb(144, 146, 148);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  height: 100px;
+}
+.faq.active {
+    background-color: #fff;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    transition: all 0.2s ease-in-out;
+  }
+  .faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  color: rgb(15, 184, 15);
+  font-size: 7em;
+  font-family: 'Font Awesome 5 Free';  /* mana shu font-family tufayli to'rt burchak qutimiz dumaloq icon shakliga keldi */
+  position: absolute;
+  opacity: 0.3;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+.faq.active::before {
+    color: rgb(77, 119, 197);
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+    transition: all 0.2s ease-in-out;
+  }
+.faq-title {
+  margin: 0 35px 0 0;
+  transition: all 0.2s ease-in-out;
+}
+.faq-text {
+transform: scale(0);
+transition: all 0.2s ease;
+margin: 30px 0 0;
+
+}
+.faq.active .faq-text {
+    transform: scale(1);
+    transition: 0.2s ease;
+    
+  }
+.faq-toggle {
+  background-color: rgb(236, 236, 236);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+.faq-toggle:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+  transition: all 0.2s ease-in-out;
+}
+.fa-chevron-down, .fa-times{
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+}
+.faq-toggle .fa-times {
+  transform: scale(0);
+  transition: 0.2s ease;
+  
+}
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  transform: scale(1);
+  transition: 0.2s ease;
+}
+.faq.active .faq-toggle .fa-chevron-down {
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+  transition: all 0.2s ease-in-out;
+}
